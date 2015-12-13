@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p>This project is an outgrowth of two other very early Python-for-Fun projects: Logic Circuits and Logic Cirucuits two. These are still accessible and draw a fair following of readers. In those projects you have the ability to build digital logic circuits with primitive components and encapsulate a circuit into a component that can be used (even multiple times) in a more elaborate circuit. In those projects we ended up building a circuit to add binary numbers and another to multiply.</p>
+<p>This project is similar but with a somewhat different focus.</p>
+<blockquote>
+<ul class="simple">
+<li>Components are drawn on a canvas, laid out relative to each other and connected with wires.</li>
+<li>The circuits contain a graphic representation of their components. This is done using Pygame.</li>
+<li>Instead of more complex basic components such as the DFlipFlop, everything in this project is built from 2 input Nand gates and inverters, 3 types of switches, connectors and wires. By the end we will build a complete 4-bit binary counter.</li>
+<li>The display of the circuits may be zoomed in and out, through different layers of circuitry.</li>
+<li>The circuits run in an animation where the high and low signals in the wires are displayed by changing the color of each wire. Combined with the zoom lens it is much easier to see how everything works together.</li>
+<li>Most everything is object oriented and each component or circuit class also has a test class which creates a demo for this write-up.</li>
+</ul>
+</blockquote>
+<p>The amount of code is a bit on the high side, but still, I think it will be very approachable. There are about 500 lines of code that build and animate components and circuits. Another 200 lines are in the test classes.</p>
+<p>It's good if you can have pygame installed so that you can follow along while the animations are running. But even if not the screen-shots here should enable you to understand everything.</p>
+<p>We will look at the basic components, and combine them into small circuits. Circuits can be encapsulated which makes them look and act like basic components. Within an encapsulated circuit there are other components, including, perhaps, inner circuits.</p>
+<p>Each component within a circuit resides in a <em>layer</em>. The layer is assigned automatically and is one greater than its parent circuit. The top circuit resides in layer 1 by itself.</p>
+<p>When we view an animation we specify the layer depth to which we will view. Any circuit at this depth will be shown as a box. Circuits above this value will be shown expanded. Basic components at or above (i.e. lower layer numbers) will also be drawn as well as the wires connecting everything. Components and circuits in higher (deeper) layers are not drawn but they are still running.</p>
+<p>Along with components we have connectors. Each basic component has a fixed number of connectors with names (like A,B,C). Wires run between connectors, linking a single output to zero or more inputs. Circuits also have connectors that link their output and inputs to internal connectors.</p>
+</div>
+<div class="section" id="basic-components">
+<h1>Basic Components</h1>
+<p>The components that are &quot;built-in&quot; are the 2 input NAND gate, the INVERTER, and 3 kinds of switches. From these basic parts we'll build simple circuits and later encapsulate circuits into components to be used in more complex circuits.</p>
+<p>The INVERTER is treated as a seperate component, but it could be easily made from a NAND gate by simply connecting both inputs to the same source.</p>
+<p>The NAND gate has a little circle on its output. This means that the output is calculated as an AND of the inputs and then inverted. Inversion is important. Without it we couldn't build most of what we be showing, especially memory circuits.</p>
+<p>This is also how actual electronic gates work. The INVERTER does nothing more than simply change high to low or low to high. In electronic gates high is usually 5 volts and low is 0 volts. Here high is red and low is blue.</p>
+<p>Here is our first circuit that uses four of the five basic components.</p>
+<img alt="images/basic-01.png" src="images/basic-01.png" />
+<p>N1 is a NAND gate whose output (C) is low (blue) only if both inputs (A and B) are high (red). The inputs of N1 are switches. S1 is a simple toggle switch. Each time it is clicked it turns either <em>off</em> or <em>on</em>. MP1 is a multi-pulsar. If clicked on it produces a pulse stream alternating between high and low. Clicked again returns it to its rest state (high).</p>
+<p>The INVERTER I1 simply produces an output (B) which is the reverse of its input (A).</p>
+<p>N1 and I1 together in this configuration form an AND gate whose output is high (red) if and only if both inputs are high. Though we won't be using AND gates in this project, it's nice to see how one can be built as a circuit.</p>
+<p>As long as S1 is on (outputing red), then whatever is produced by MP1 will be duplicated at I1's output. If S1 is clicked off however, the AND circuit will not pass on the signal from MP1. This is how an AND gate can work as a gateway. To run this in python use the command:</p>
+<pre class="literal-block">
+$ python basics.py
+</pre>
+<p>First click MP1 to start a pulse stream going. Then toggle S1 to see how the signal from MP1 is either stopped or passed through.</p>
+<img alt="images/basic-02.png" src="images/basic-02.png" />
+<img alt="images/basic-03.png" src="images/basic-03.png" />
+<p>The next circuit uses 2 INVERTER gates feeding a NAND. This circuit forms the equivalent of an OR gate. The output of the NAND (connector N1.C) is high if either or both of inputs (the outputs of switches S1 and S2) are high.</p>
+<p>Notice that in both the AND and OR circuit, two single inversions cancel each other out, resulting in &quot;positive&quot; logic. Here are two images one with both input low and another with one input high:</p>
+<pre class="literal-block">
+$ python or1.py
+</pre>
+<img alt="images/or1-01.png" src="images/or1-01.png" />
+<img alt="images/or1-02.png" src="images/or1-02.png" />
+<p>You might have noticed something else about the above screen shots. Here the connectors are labled (A,B,C) along with the components (N1,I2,S1,S2). We'll get into how text processing is done when we discuss the code.</p>
+</div>
+<div class="section" id="encapulating-a-circuit">
+<h1>Encapulating a Circuit</h1>
+<p>The test program or2.py encapsulates the OR circuit onto layer 2. If we view into layer 2 by passing the command line argument &quot;2&quot; we see the following:</p>
+<pre class="literal-block">
+$ python or2.py 2
+</pre>
+<img alt="images/or2-01.png" src="images/or2-01.png" />
+<p>Notice the labeling on the connectors. The boxed up &quot;or&quot; gate has inputs &quot;A&quot; and &quot;B&quot; and each switch a &quot;B&quot; connector.</p>
+<p>Now let's peer into layer 3 we to see the details:</p>
+<pre class="literal-block">
+$ python or2.py 3
+</pre>
+<img alt="images/or2-02.png" src="images/or2-02.png" />
+<p>Notice how there are more labels. The A-B-C from the box is still showing. Though the box is not shown, these connectors into the circuit still exist. The other labels are all tied to the components inside the circuit.</p>
+<p>Before, we were not passing a <em>layer</em> argument into the test programs. This is because the default layer is in fact 2.</p>
+</div>
+<div class="section" id="something-a-bit-more-complex">
+<h1>Something a bit more complex</h1>
+<p>An XOR gate (exclusive or) outputs high if one and only one input is high. Below is a circuit using 4 NAND gates to provide this function on connector N4.C. The inverter to the right changes the function to an XNOR:</p>
+<pre class="literal-block">
+$ python xor.py 3
+</pre>
+<img alt="images/xor-01.png" src="images/xor-01.png" />
+<img alt="images/xor-02.png" src="images/xor-02.png" />
+<p>The program xor.py encapsulated the 4 NAND gates into a circuit component on layer 2. Viewing through to layer 3 looks into the encapsulation. But if we look just through layer 2 instead we see:</p>
+<pre class="literal-block">
+$ python xor.py 2
+</pre>
+<img alt="images/xor-03.png" src="images/xor-03.png" />
+<p>The inverter on the right still resides in layer 2. We'll look later closely at the code.</p>
+<p>Now an XOR gate has its own drawing form which is NOT a rectangular box. So do the AND and OR gates. But we're not going to use them further so I didn't spend time on their looks. The flip-flops that now follow do traditionally fit into a box.</p>
+</div>
+<div class="section" id="flip-flops">
+<h1>Flip-flops</h1>
+<p>In the earlier projects we built a simple latch from 2 NAND gates. This demonstrated that positive feedback to could be used to remember or store data. Here is a simple latch:</p>
+<pre class="literal-block">
+$ python latch.py 3
+</pre>
+<img alt="images/latch-01.png" src="images/latch-01.png" />
+<p>Pulsars P1 and P2 each issue a short single pulse to low when clicked and then return to high. The 2 NAND gates form a one-bit memory unit that basically can remember which pulsar was last clicked. Click them one after another and watch the output change. If this is new for you study the circuit and understand why it works as it does. Encapulated the circuit looks like:</p>
+<pre class="literal-block">
+$ python latch.py 2
+</pre>
+<img alt="images/latch-02.png" src="images/latch-02.png" />
+<p>The inputs on the left of the encapsulation box are generally labeled A and B and the output on the right is labeled Q (not C) and is connected to the C output of N1.
+We're going to avoid labeling every input and output when it is clear from the layout.</p>
+</div>
+<div class="section" id="the-data-latch">
+<h1>The Data Latch</h1>
+<p>The simple latch is not often used because we usually want to do something else: A data line coming in and the ability to clock the data value at a given point in time. By adding some front-end logic we can have exactly that:</p>
+<pre class="literal-block">
+$ python dlatch.py 3
+</pre>
+<img alt="images/dlatch-01.png" src="images/dlatch-01.png" />
+<p>Let's take a minute to study this. The data coming in from D1 (a simple toggle switch) is delivered to N1 and N2 but because of the inverter I1 it is delivered at opposite polarity. C1 is a one-shot pulsar delivering a short downward pulse when clicked. I2 makes this an upward pulse to N1 and N2. One of the outputs N1.C or
+N2.C then drops setting the simple latch L1.</p>
+<p>We can also set the view all the way into layer 4 to see the working of L1 as well:</p>
+<pre class="literal-block">
+$ python dlatch.py 4
+</pre>
+<img alt="images/dlatch-02.png" src="images/dlatch-02.png" />
+<p>There is a small problem, however. While the clock line is active (low) and change on the data line will be immediately be passed through to the output. This may or may not be serious depending on the application. For us it is very serious because we will be using more feedback from outputs back to inputs. There is a way around this though.</p>
+</div>
+<div class="section" id="edge-triggered-data-latch">
+<h1>Edge Triggered Data Latch</h1>
+<p>This circuit works something like an airlock. Or here in Northern Germany (and in the Netherlands) water locks between canals. Or even the locks on the Panama Canal bringing ships over the mountains. The idea is simple. Don't let the air or water or signal rush through when the door is open. Use two doors. When one door closes the other is opened.</p>
+<p>The simple Data latch is like a single door and when the clock is low the door is opened. Our improved E-latch will use 2 D-latches and with a single inverter their 2 clock inputs can be exactly out of step. When one is open the other is closed.</p>
+<p>Here are three screen shots viewing through to layers 2, 3, 4 and 5:</p>
+<pre class="literal-block">
+$ python elatch.py 2
+</pre>
+<img alt="images/elatch-02.png" src="images/elatch-02.png" />
+<pre class="literal-block">
+$ python elatch.py 3
+</pre>
+<img alt="images/elatch-03.png" src="images/elatch-03.png" />
+<pre class="literal-block">
+$ python elatch.py 4
+</pre>
+<img alt="images/elatch-04.png" src="images/elatch-04.png" />
+<pre class="literal-block">
+$ python elatch.py 5
+</pre>
+<img alt="images/elatch-05.png" src="images/elatch-05.png" />
+<p>It reminds me a lot of using the zoom feature on mapquest</p>
+</div>
+<div class="section" id="the-divide-by-two-circuit">
+<h1>The Divide by Two Circuit</h1>
+<p>By adding just one inverter, we can turn an E-latch into a circuit with just one input (the clock) and convert a pulse stream on the input to another on the output with exactly half the frequency.</p>
+<p>By feeding the output back to the data input inverted, the output will flip to the opposite polarity each time a pulse come in on the clock. In fact the output will flip each time the input clock goes from low to high. This creates a new pulse stream on the output with just half the frequency. Here is what it looks like:</p>
+<pre class="literal-block">
+$ python div2.py 3
+</pre>
+<img alt="images/div2-01.png" src="images/div2-01.png" />
+</div>
+<div class="section" id="the-four-bit-binary-counter">
+<h1>The Four Bit Binary Counter</h1>
+<p>By simply stringing four div2 circuits together the outputs become bits in a binary counter. Here's what the circuit looks like at layer 3:</p>
+<pre class="literal-block">
+$ python counter.py 3 1
+</pre>
+<img alt="images/counter-01.png" src="images/counter-01.png" />
+<p>Notice that there are now 2 arguments on the command line. The first is still the layer to view. The second is a scale factor that determines the size of components drawn to the screen. This defaults to &quot;2&quot;. But specifying &quot;1&quot; we get a half scale. Sometimes &quot;3&quot; and &quot;4&quot; are used as well to magnify the circuit.</p>
+<p>The screen shot was taken while the counter was in operation. At the bottom the blue lines represent '1' bits, the red lines '0'. We caught the count at '0101' or in decimal 5.</p>
+<p>The counter counts up to '1111' and then wraps back to '0000'. And if we take the red lines for '1' instead of blue, we have a counter that counts down to zero and then wraps back to 15 decimal.</p>
+<p>Here is a partial view of the circuit at layer 5:</p>
+<pre class="literal-block">
+$ python counter.py 5 1
+</pre>
+<img alt="images/counter-02.png" src="images/counter-02.png" />
+</div>
+<div class="section" id="design-concepts">
+<h1>Design Concepts</h1>
+<div class="section" id="settings">
+<h2>Settings</h2>
+<p>The module <a class="reference external" href="settings.py">settings.py</a> contains constants and also extracts scale and layer variables from the command line. Constants include colors we use as RGB tuples, screen dimensions, animation speed and parameters for the single and repeating pulse switches.</p>
+</div>
+<div class="section" id="component-abstract-class">
+<h2>Component Abstract Class</h2>
+<p>The component class <a class="reference external" href="component.py">component.py</a> is an abstract class. Basic component classes (Nand2, Inv, Swt) inherit this class as well as the circuit class. Component contains the attributes that all the sub-classes have in common such as name, position, layer and scale. Also common methods such as position alignment, handling mouse clicks, scaling drawing arguments. Sub-classes do not define their own __init__ method but must define a setupGraphics method which is called at the end of Component.__init__</p>
+</div>
+<div class="section" id="basic-gates-and-switches">
+<h2>Basic Gates and Switches</h2>
+<p>The module <a class="reference external" href="gates.py">gates.py</a> contains the classes for the 2 input NAND gate (Nand2), the INVERTER gate and the the 3 types of switches. Each has a standard set of methods.</p>
+<p>The setupGraphics methods make connectors to attach to the drawing. the self.output connector is mandatory as it's the source of a wire tree (more coming) that will disperse the output of the gate to appropriate input connectors.</p>
+<p>The draw methods contain a list of arguments to use with pygame drawing commands. These arguments must be scaled before used to draw polygons, circles, etc.</p>
+<p>Every component must have a computeOutput method which calculates the gate's output from its inputs and sometimes its history. Flip-flop circuits are full of history.</p>
+<p>The switches also have a takeClick method to respond to being clicked by the mouse. (turned off or on) and the pulsar switches have fairly complex computeValue methods</p>
+</div>
+<div class="section" id="connectors">
+<h2>Connectors</h2>
+<p>Connectors <a class="reference external" href="connector.py">connector.py</a> have several things in common with components but there are enough differences to make subclassing unattractive. Both have a parent, a name, a position, a value and live in a given layer. Components have connectors for their inputs and output. The component is the parent of these connectors and they all reside in the same layer. For circuits that are encapsulated their external connectors reside one layer above the inner connectors.</p>
+<p>Connectors are connected to each other with wires. Interestingly, wires don't have a representation in the code. They are simply drawn during animation as a pygame line in either the HOT or COLD color from the source connector to one of its children in the feed list.</p>
+<p>Connectors may also reside indepently within a circuit. In this case the circuit is the parent and both circuit and connector reside in the same layer. These connectors make it easy to &quot;fan out&quot; a signal on a wire are even simply let a wire change direction.</p>
+<p>If a connectors parent has to move (scoot over), then the connector must also. The subject of alignment in circuit layout will be discussed below.</p>
+<p>During construction of a circuit the method <em>addWire</em> connects components together. This method takes an arbitrary number of connector instances, or <em>(x,y)</em> positions as arguments. Each position argument creates a free standing connector named &quot;Anon&quot; at the x,y position. Method <em>addWire</em> works down the arguments and populates the <em>feeds</em> list each connector appropriately. It returns the last connector as its function value, letting us chain these calls or fan a signal out.</p>
+<p>During animation the method <em>drawWires</em> recursively walks the links between connectors and paints wires (lines) along the way. Since they are just wires all connected together, they all carry the same signal and are painted the same color.</p>
+<p>Wires are not drawn inside an encapsulated circuit. This is controlled the the layer attribute of both the source and target. If either is hidden (below the visible viewing layer) then the wire is not drawn.</p>
+<p>Usually, two &quot;connected&quot; connectors reside on the same layer. The exception is with a circuit's external connectors (at layer n) and its internal wiring (at layer n+1).</p>
+<p>Also during animation the method <em>sendOutput</em> works much like <em>drawWires</em>. It transmits the signal from an output connector, through other connectors, on to input connectors on basic components. The difference is that, unlike <em>drawWires</em>, <em>sendOutput</em> doesn't stop at the hidden layer, but goes right to the bottom. The <em>sendOutput</em> method is defined for components as well as connectors.</p>
+</div>
+<div class="section" id="text-processing">
+<h2>Text Processing</h2>
+<p>Text (<a class="reference external" href="text.py">text.py</a>)  is used to label basic components and encapsulated circuits with their names, create banners and to optionally label connectors. Text is tied to a given x,y point and placed in one of four quadrants. When text.py is run stand-alone it creates a image that shows how the four quadrants are used:</p>
+<pre class="literal-block">
+$ python text.py
+</pre>
+<img alt="images/text-01.png" src="images/text-01.png" />
+</div>
+<div class="section" id="alignment">
+<h2>Alignment</h2>
+<p>Early versions of this project required me to carefully position each component of a circuit working out the x,y position by hand. The origin of a component or circuit is the upper left corner, basically the pygame convention. If a component is inside a circuit its x,y is relative to the origin of the circuit.</p>
+<p>When we try to scale, placing items by hand can quickly fall apart. What works much better is to place the first component at a x,y position and then place other components relative to the first or to each other.</p>
+<p>It turns out that it's very effective if a circuit or component can align itself to another by specifying one of its own connectors and another connector from the target, along with an offset (xoff,yoff). We then have a very flexible system that can adapt to growing and shrinking quite nicely. You've already seen this is the above screen shots. We want to use connectors because we run wires between them and this makes it easy to space components easily and to have wiring that is largely horizontal or vertical.</p>
+<p>The methods <em>align</em> and <em>scootOver</em> make this work. If a circuit is aligning itself to another it will scoot over appropriately and all the bits inside (components, connectors, subcircuits) must scoot over too. This is the sort of situation where recursion becomes fun. We'll be seeing more of this now as we start to examine more of the code.</p>
+</div>
+</div>
+<div class="section" id="a-walk-through-some-code">
+<h1>A Walk through some Code</h1>
+<div class="section" id="a-simple-animation">
+<h2>A Simple Animation</h2>
+<p>Let's have another look at our first circuit.</p>
+<img alt="images/basic-01.png" src="images/basic-01.png" />
+<p>Here is the Python code to build and then animate it:</p>
+<pre class="literal-block">
+# basics.py
+#  Show off the basic gates in a simple circuit
+#
+from   gates     import MultPuls, Nand2, Inv, Swt
+from   circuit   import Circuit
+
+class TestBasic1 (Circuit) :
+    def setupGraphics(self) :
+        self.banner = &quot;Basic components. Switch, Multipulsar, Nand, Inverter&quot;
+
+        n1 = Nand2(self,&quot;N1&quot;, self.scale1((50, 30))) # Nand Gate
+        i1 = Inv  (self,&quot;I1&quot;)            # Inverter
+        s1 = Swt  (self,&quot;S1&quot;)            # Switch feeding input A
+        m1 = MultPuls (self,&quot;MP1&quot;)       # Pulsar feeding input B
+
+        s1.align(s1.B, n1.A, -50, 0)  # line up the gates
+        m1.align(m1.B, n1.B, -30, 0)
+        i1.align(i1.B, n1.C,  80, 0)  # inverter follows Nand
+
+        n1.A.labelQuad = 2            # Label all connectors
+        n1.B.labelQuad = 2
+        n1.C.labelQuad = 1
+        i1.A.labelQuad = 2
+        i1.B.labelQuad = 1
+
+        self.gates = (m1,s1,n1,i1)
+        s1.B.addWire(n1.A)
+        m1.B.addWire(n1.B)
+        n1.C.addWire(i1.A)
+        i1.B.addWire( (i1.B.x(30), i1.B.y()))  # tail to see
+
+if __name__ == &quot;__main__&quot; :
+    import gameloop
+    from   settings import CmdScale
+    circuit = TestBasic1 (None, &quot;TestBasic1&quot;,(100,100),scale=CmdScale)
+    gameloop.gameloop(circuit)
+</pre>
+<p>Let's explain what is going on. The program can run stand-alone with the module name &quot;__main__&quot;. The gameloop animation expects to be passed a circuit to animate (bottom) so we define a class for our circuit and build an instance of it. This is a subclass of <em>Circuit</em> inheriting all of the standard code and we supplement it with the method <em>setupGraphics</em>. An instance of <em>TestBasic1</em> is built in the second to last line and then passed to the <em>gameloop.py</em> for animation.</p>
+<p>The <em>setupGraphics</em> method defines the 2 gates and 2 switches and sets the banner attribute. Only the Nand gate is given a position of (50,30) scaled and offset relative to its parent; in this case the pygame screen. The Inverter and 2 switches are created with a default position (0,0) and then align themselves to the Nand gate. Switch <em>s1</em> aligns it output connector 50 units to the left of the Nand's A input. The inverter <em>I1</em> aligns its input 80 units to the right of <em>N1</em>'s output connector. A unit here is one pixel times the scale factor. The scale factor defaults to two.</p>
+<p>The connectors are all assigned a <em>labelQuad</em> attribute to have their labels printed in the appropriate quadrant. The circuit <em>self</em> is assigned a <em>gates</em> attribute. This is a list of its components and used by the abstract <em>Circuit</em> class. Finally, wires are created connecting the two switches to the Nand, the Nand to the Inverter and then a piggy tail wire just to show the final output from the Inverter.</p>
+</div>
+<div class="section" id="circuits">
+<h2>Circuits</h2>
+<p>The Circuit class <a class="reference external" href="circuit.py">circuit.py</a> lets us combine components and optionally encapsulate them into a single component with its own connectors to the outside world. Circuits made for encapsulation (put into a box) do not have switches or banners and typically we don't label the interior connectors. However the outermost (top) circuit is generally never encapsulated and it makes sense to have switches within.</p>
+<p>The class is quite small and enables the animation of a circuit with the following</p>
+<blockquote>
+<ul class="simple">
+<li>The method <em>computeOutput</em> for a circuit simply calls the same for each component in its <em>gates</em> attribute as well as <em>sendOutput</em> which distributes the signals within the circuit. The order of computation and distribution is set by the order of the components in <em>gates</em></li>
+<li>The method <em>checkClicked</em> simply passes asks each of its components to do the check for the being clicked and repsond. This is only in the top non-encapsulated circuit.</li>
+<li>The draw method provides 3 possibilities.<ol class="arabic">
+<li>The circuit may be hidden and not drawn at all if it resides below the viewing layer.</li>
+<li>The circuit may be drawn as a box with just a label and external connectors if it exactly on the viewing layer.</li>
+<li>The circuit may be drawn in detail if it is above the viewing layer.</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="a-fuller-example">
+<h2>A Fuller Example</h2>
+<p>Let's return to the OR circuit <a class="reference external" href="or2.py">or2.py</a> and look at the code. This will be the only module we'll study in detail. All the later circuits follow exactly the same pattern.</p>
+<img alt="images/or2-02.png" src="images/or2-02.png" />
+<p>The first part of the <em>setupGraphics</em> method looks like:</p>
+<pre class="literal-block">
+class Or (Circuit) :
+  def setupGraphics(self) :
+      n1 = Nand2(self,&quot;N1&quot;, self.scale1((80, 30))) # Nand Gate
+      i1 = Inv  (self,&quot;I1&quot;) # Inverter for n1.A
+      i2 = Inv  (self,&quot;I2&quot;) # Inverter for n1.B
+      # external connectorself. Same depth as xor circuit
+      i1.align(i1.B, n1.A, -40, -20)  # inverter precedes Nand
+      i2.align(i2.B, n1.B, -40,  20)  # inverter precedes Nand
+      self.A = Connector(self,&quot;A&quot;,((i1.A.x(-20),i1.A.y() )))
+      self.B = Connector(self,&quot;B&quot;,((i2.A.x(-20),i2.B.y() )))
+      self.C = Connector(self,&quot;C&quot;,((n1.C.x( 20),n1.C.y() )))
+      self.output = self.C       # who is output
+
+      self.gates = (i1,i2,n1)
+      self.i1,self.i2,self.n1 = (i1,i2,n1)
+</pre>
+<p>We define the 3 gates with the circuit <em>self</em> as the parent. The first one <em>n1</em> is set at a scaled position in the circuit. The two inverters <em>i1</em> and <em>i2</em> are defined and then aligned to <em>n1</em>. The exteral connectors <em>A</em>, <em>B</em>, and <em>C</em> are built and placed at a <em>(x,y)</em> position relative to the internal gates. These positions are used if the circuit is drawn in detail. The output is identified as connector <em>C</em>. The <em>gates</em> attribute is constructed. The individual gates are also kept as attributes of the circuit. This allows them to be referenced from outside the circuit itself (only sometimes a good idea):</p>
+<pre class="literal-block">
+continued ....
+      i1.B.addWire(n1.A)
+      i2.B.addWire(n1.B)
+      self.A.addWire(i1.A)
+      self.B.addWire(i2.A)
+      n1.C.addWire(self.C)
+
+      if self.encapsulated() :  # if encapsulated re-work externals
+          self.A.pos, self.B.pos, self.C.pos = self.scaleM((0,5),(0,35),(20,20))
+</pre>
+<p>The rest of <em>setupGraphics</em> method does the wiring between connectors both internally and to the 3 external external connectors <em>self.A</em>, <em>self.B</em> and <em>self.C</em>. So now, if the circuit is displayed in detail these 3 external connectors are in position to be wired into the circuit above. If the circuit is shown encapsulated (as a box) then these connectors need to take new positions that align to the box.</p>
+<p>Next we have test circuit whose purpose is simply to instantiate and Or circuit and test it by adding switches, a banner and what not. In this case we labeled all of the connectors both inside (like <em>or2.n1.A</em>) and outside (like <em>s1.B</em>). Here is the code for that:</p>
+<pre class="literal-block">
+class TestOr (Circuit) :
+  def setupGraphics(self) :
+      self.banner = &quot;Encapsulated OR circuit&quot;
+      or2 = Or(self,&quot;O2&quot;  , self.scale1((50,30)))
+      s1 = Swt  (self,&quot;S1&quot;)   # Switch feeding input A
+      s2 = Swt  (self,&quot;S2&quot;)   # Switch feeding input B
+
+      s1.align(s1.B, or2.A, -30, 0)  # line up the gates
+      s2.align(s2.B, or2.B, -30, 0)
+      s1.B.addWire(or2.A)
+      s2.B.addWire(or2.B)
+      s1.B.labelQuad = 1
+      s2.B.labelQuad = 1
+      self.gates = (s1,s2,or2)
+
+      or2.n1.A.labelQuad = 3            # Label all the connectors
+      or2.n1.B.labelQuad = 2
+</pre>
+<p>Finally, or2.py is meant to be run as main. When it is invoked from the command line
+the scaling factor and view layer are taken from sys.argv or left as defaults as the <em>settings</em> module <a class="reference external" href="settings.py">settings.py</a> is imported. Then a TestOr instance is created, which further creates an Or instance along with the surroundings to test it. The TestOr instance is passed to the gameloop function.</p>
+<p>This same pattern is used in the modules that stack like nested russian dolls. Once you understand one, the others are easy.</p>
+<blockquote>
+<a class="reference external" href="latch.py">latch.py</a>,
+<a class="reference external" href="dlatch.py">dlatch.py</a>,
+<a class="reference external" href="elatch.py">elatch.py</a>,
+<a class="reference external" href="div2.py">div2.py</a>,
+<a class="reference external" href="counter.py">counter.py</a>.</blockquote>
+<p>Each one can run stand-alone from the command line and uses one or more objects from the previous module.</p>
+</div>
+<div class="section" id="the-gameloop">
+<h2>The gameloop</h2>
+<p>When one of the stand-alone modules is run as <em>main</em> it builds its test circuit and passes it to the gameloop function in <a class="reference external" href="gameloop.py">gameloop.py</a>. The latter is short and pretty much boiler plate Pygame. It creates a screen and enters an event loop. The constant TICKS_PER_SECOND in the settings module specifys how rapidly the loop is run.</p>
+<p>Within the loop a few thing happen. A mouse click on the window termination <em>x</em> will shut the program off. A mouse click on a switch (or pulsar) will toggle it. The switch is found by a recursive search through layers of circuits, generally not very deep. Next, the circuit is asked to compute its output, a request that also is sent recursively through the tree of circuits producing signals sent through wires at all layers. The screen is then erased and the circuit is drawn, wires and all. The draw request is also sent recursively through the circuits. Finally, the screen is flipped and the process repeats. At the default setting 200 times a second.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

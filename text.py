@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#  Animated Circuits
+#  Logic Circuits
 #
 #  Copyleft 2015 Chris Meyers <chris.meyers47@gmail.com> 2015.12.13
 #
@@ -34,7 +34,7 @@ __version__    = "2.0"
 __maintainer__ = "Chris Meyers, Jeff Elkner, Kevin Cole"
 __email__      = "kevin.cole@novawebcoop.org"
 __status__     = "Development"  # "Prototype", "Development" or "Production"
-__appname__    = "Animated Circuits"
+__appname__    = "Logic Circuits"
 
 # text.py
 

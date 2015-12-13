@@ -8,7 +8,7 @@ MyInput = input         # assume Python 3
 from sys import argv, version
 if len(argv)  >  1 : CmdEncapsuleLayer = int(argv[1])
 if len(argv)  >  2 : CmdScale          = int(argv[2])
-if version[1] < '3': MyInput = raw_input # python 2
+if version[0] < '3': MyInput = raw_input # python 2
 
 BGCOLOR = ( 75, 75, 75)
 RED     = (255,  0,  0)

@@ -20,7 +20,6 @@
 #  Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 #  Boston, MA 02110-1301, USA.
 #
-#
 
 from __future__ import print_function
 from six.moves  import input           # use raw_input when I say input
@@ -38,9 +37,10 @@ __appname__    = "Logic Circuits"
 
 import pygame as pg
 from   settings import BGCOLOR, TICKS_PER_SECOND
-from   settings import SCREEN_WIDTH, SCREEN_HEIGHT, MyInput, Debug
+from   settings import SCREEN_WIDTH, SCREEN_HEIGHT, Debug
 
-def gameloop(circuit) :
+
+def gameloop(circuit):
     pg.init()
     running = True
     screen  = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -50,8 +50,9 @@ def gameloop(circuit) :
         event = pg.event.poll()
         if event.type == pg.QUIT:
             running = False
-        elif event.type == pg.MOUSEBUTTONDOWN :
-            #if Debug : print "Mouse clicked at (%d, %d)" % event.pos
+        elif event.type == pg.MOUSEBUTTONDOWN:
+#           if Debug:
+#               print("Mouse clicked at ({0}, {1})".format(event.pos))
             circuit.checkClicked(event.pos)
 
         circuit.computeOutput()
@@ -60,5 +61,6 @@ def gameloop(circuit) :
         circuit.draw(screen)
         clock.tick(TICKS_PER_SECOND)   # times per second
         pg.display.flip()
-        #if Debug : MyInput ("Hit return to continue:")
+#       if Debug:
+#           input("Hit return to continue:")
     pg.quit()

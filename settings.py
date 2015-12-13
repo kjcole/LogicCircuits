@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#  Logic Circuits
+#  Logic Circuits - settings.py
 #
 #  Copyleft 2015 Chris Meyers <chris.meyers47@gmail.com> 2015.12.13
 #
@@ -20,7 +20,6 @@
 #  Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 #  Boston, MA 02110-1301, USA.
 #
-#
 
 from __future__ import print_function
 from six.moves  import input           # use raw_input when I say input
@@ -36,23 +35,22 @@ __email__      = "kevin.cole@novawebcoop.org"
 __status__     = "Development"  # "Prototype", "Development" or "Production"
 __appname__    = "Logic Circuits"
 
-#  settings.py
+from sys import argv, version
 
 CmdScale          = 2   # generally just right
 CmdEncapsuleLayer = 2   # shows detail on of outermost circuit
 Debug   = 0             # Debug level
-MyInput = input         # assume Python 3
 
-from sys import argv, version
-if len(argv)  >  1 : CmdEncapsuleLayer = int(argv[1])
-if len(argv)  >  2 : CmdScale          = int(argv[2])
-if version[0] < '3': MyInput = raw_input # python 2
+if len(argv)  >  1:
+    CmdEncapsuleLayer = int(argv[1])
+if len(argv)  >  2:
+    CmdScale          = int(argv[2])
 
-BGCOLOR = ( 75, 75, 75)
-RED     = (255,  0,  0)
-GREEN   = (  0,255,  0)
-BLUE    = (  0,  0,255)
-YELLOW  = (255,255,  0)
+BGCOLOR = ( 75,  75,  75)
+RED     = (255,   0,   0)
+GREEN   = (  0, 255,   0)
+BLUE    = (  0,   0, 255)
+YELLOW  = (255, 255,   0)
 
 COLD = BLUE    # wire colors
 HOT  = RED
@@ -64,4 +62,3 @@ SCREEN_HEIGHT =  600
 
 PULS_INTERVAL       = 50   # ticks
 MULT_PULS_HALFCYCLE = 50   # ticks each half
-

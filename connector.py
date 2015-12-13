@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#  Logic Circuits
+#  Logic Circuits - connector.py
 #
 #  Copyleft 2015 Chris Meyers <chris.meyers47@gmail.com> 2015.12.13
 #
@@ -20,7 +20,6 @@
 #  Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 #  Boston, MA 02110-1301, USA.
 #
-#
 
 from __future__ import print_function
 from six.moves  import input           # use raw_input when I say input
@@ -36,69 +35,73 @@ __email__      = "kevin.cole@novawebcoop.org"
 __status__     = "Development"  # "Prototype", "Development" or "Production"
 __appname__    = "Logic Circuits"
 
-# connector.py
-
 import pygame as pg
 from   component import posAdd
 from   settings  import HOT, COLD, CmdEncapsuleLayer
 from   text      import textDraw
 
-class Connector :
-    def __init__ (s, parent, name, pos, value=0, feeds=()) :
-        s.name, s.pos, s.value, s.feeds = name,pos,value,feeds
+
+class Connector:
+    def __init__(s, parent, name, pos, value=0, feeds=()):
+        s.name, s.pos, s.value, s.feeds = name, pos, value, feeds
         s.parent = parent
         s.layer  = parent.layer
         s.prevValue = None
         s.labelQuad = 0
         parent.kids += (s,)
 
-    def x(s, val=0) : return s.pos[0]+val*s.parent.scale
+    def x(s, val=0):
+        return s.pos[0] + val * s.parent.scale
 
-    def y(s, val=0) : return s.pos[1]+val*s.parent.scale
+    def y(s, val=0):
+        return s.pos[1] + val * s.parent.scale
 
-    def scootOver (self, xmov, ymov, nest=0) :
-        self.pos = posAdd(self.pos, (xmov,ymov))
+    def scootOver(self, xmov, ymov, nest=0):
+        self.pos = posAdd(self.pos, (xmov, ymov))
 
-    def addWire(s, *others) :  # to a series of connectors
+    def addWire(s, *others):  # to a series of connectors
         this = s
         anons = []
         maxLayer = 0
-        for other in others :
-            if type(other) == type(()) : # only pos? make new one
-                other = Connector(s.parent,"Anon",other,s.value)
+        for other in others:
+            if type(other) == type(()): # only pos? make new one
+                other = Connector(s.parent, "Anon", other, s.value)
                 anons.append(other)  # save to assign layer later
                 other.layer = None   # hold for now
-            else :
-                maxLayer = max(maxLayer,other.layer)
+            else:
+                maxLayer = max(maxLayer, other.layer)
 
             this.feeds += (other,)
             this = other            # chain 'em
-        for anon in anons : anon.layer = maxLayer
+        for anon in anons:
+            anon.layer = maxLayer
         return this   # lets us chain calls left to right
 
-    def drawWires(s, screen, color=None) :
-        if not color : color = [COLD,HOT][s.value]
+    def drawWires(s, screen, color=None):
+        if not color:
+            color = [COLD, HOT][s.value]
         slq = s.labelQuad
-        for d in s.feeds :
+        for d in s.feeds:
             dlq = d.labelQuad
-            txt = "Draw wire %s.%s=%s @ %s - %s.%s=%s @ %s"  \
-               % (s.parent.name, s.name, s.layer, s.pos,
-                  d.parent.name, d.name, d.layer, d.pos)
-            if max(s.layer,d.layer) <= CmdEncapsuleLayer :
-                pg.draw.lines(screen, color, False, (s.pos,d.pos))
-                if slq :
+            txt = "Draw wire {0}.{1}={2} @ {3} - {4}.{5}={6} @ {7}" \
+                  .format(s.parent.name, s.name, s.layer, s.pos[0], s.pos[1],
+                          d.parent.name, d.name, d.layer, d.pos[0], d.pos[1])
+            if max(s.layer, d.layer) <= CmdEncapsuleLayer:
+                pg.draw.lines(screen, color, False, (s.pos, d.pos))
+                if slq:
                     textDraw(screen, s.pos, color, s.name, quad=slq)
-                if dlq :
+                if dlq:
                     textDraw(screen, d.pos, color, d.name, quad=dlq)
             d.drawWires(screen, color)  # fan out
-            
-    def sendOutput(self) :       # from connector to all targets
-        if self.prevValue == self.value : return # short cut
+
+    def sendOutput(self):       # from connector to all targets
+        if self.prevValue == self.value:
+            return              # short cut
         self.prevValue = self.value
-        for dest in self.feeds :
+        for dest in self.feeds:
             dest.value = self.value
             dest.sendOutput()
-            
-    def __repr__ (s) :
+
+    def __repr__(s):
         par = s.parent.name
-        return "<Conn: %s.%s %s %d>" % (par,s.name,s.pos,s.layer)
+        return "<Conn: {0}.{1} {2} {3}>".format(par, s.name, s.pos, s.layer)

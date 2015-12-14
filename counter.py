@@ -22,9 +22,6 @@
 #  Boston, MA 02110-1301, USA.
 #
 
-from __future__ import print_function
-from six.moves  import input           # use raw_input when I say input
-
 __author__     = "Chris Meyers, Jeff Elkner and Kevin Cole"
 __copyright__  = "Copyleft 2015, Chris Meyers (2015.12.13)"
 __credits__    = ["Chris Meyers", "Jeff Elkner",
